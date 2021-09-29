@@ -30,19 +30,15 @@ def visit_page(browser):
 @when("I login with valid credentials")
 def login_valid(browser):
     browser.find_element_by_id("user-name").send_keys('valid_user')
-
-
-browser.find_element_by_id("password").send_keys('good_password')
-browser.find_element_by_class_name("btn_action").click()
+    browser.find_element_by_id("password").send_keys('good_password')
+    browser.find_element_by_class_name("btn_action").click()
 
 
 @when("I login with invalid credentials")
 def login_valid(browser):
     browser.find_element_by_id("user-name").send_keys('nope')
-
-
-browser.find_element_by_id("password").send_keys('still_nope')
-browser.find_element_by_class_name("btn_action").click()
+    browser.find_element_by_id("password").send_keys('still_nope')
+    browser.find_element_by_class_name("btn_action").click()
 
 
 @then("I should be on the inventory page")
